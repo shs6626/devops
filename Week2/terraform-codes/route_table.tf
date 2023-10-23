@@ -8,7 +8,7 @@ resource "aws_route_table" "test-route-table-pub-sub" {
 
   // 라우팅 테이블 설정 이름 및 태그 생성
   tags = {
-    Name = "test-route-table-pub-sub"
+    Name = "rice-route-table-pub-sub"
   }
 
   // VPC 선택
