@@ -2,7 +2,7 @@ resource "aws_vpc" "test-vpc" {
 
   // 이름 태그
   tags = {
-    Name = "test-vpc-rice"
+    Name = "shs-vpc-week2"
   }
 
   // IPv4 CIDR - 변수에서 참조
