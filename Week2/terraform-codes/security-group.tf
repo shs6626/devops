@@ -22,7 +22,7 @@ resource "aws_default_security_group" "test-vpc_sg_default"{
 
 resource "aws_security_group" "test-sg-bastion" {
 
-  name   = "rice-sg-bastion"
+  name   = "shs-sg-bastion"
   vpc_id = aws_vpc.test-vpc.id
 
   ingress {
@@ -52,7 +52,7 @@ resource "aws_security_group" "test-sg-bastion" {
 resource "aws_security_group" "test-eks_sg_controlplane" {
 
     vpc_id = aws_vpc.test-vpc.id
-    name = "RICE-EKS-SG-ControlPlane"
+    name = "SHS-EKS-SG-ControlPlane"
     description = "Communication between the control plane and worker nodegroups"
 
     tags = {
@@ -91,7 +91,7 @@ resource "aws_security_group_rule" "test-eks_sg_cluster_outbound" {
 resource "aws_security_group" "test-eks_sg_nodes" {
 
     vpc_id = aws_vpc.test-vpc.id
-    name = "RICE-EKS-SG-NodeGroup"
+    name = "SHS-EKS-SG-NodeGroup"
     description = "Security group for worker nodes in Cluster"
 
     egress {
